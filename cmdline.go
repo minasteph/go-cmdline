@@ -310,7 +310,7 @@ func (c *CmdLine) Parse(args []string) {
 
 func (c *CmdLine) Die(format string, args ...interface{}) {
 	msg := fmt.Sprintf(format, args...)
-	fmt.Fprintf(os.Stderr, "error: %s\n", msg)
+	fmt.Fprintf(os.Stderr, "Error: %s\n", msg)
 	c.PrintUsage(os.Stdout)
 	os.Exit(1)
 }
